@@ -27,7 +27,7 @@ public class Hamburger {
         this.price += price;
         System.out.printf("added %s for an extra %d", name, price);
     }
-    public double itemizehamburger(){
+    public double itemiseHamburger(){
         return this.price;
     }
 }
