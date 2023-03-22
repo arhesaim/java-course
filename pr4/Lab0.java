@@ -7,10 +7,11 @@ import java.util.Scanner;
 public class Lab0 {
     public static Random random = new Random();
     public static void main(String[] args){
+
         Scanner sc = new Scanner(System.in);
         boolean works = true;
-
         ArrayList<Integer> defaultArray = createArray();
+
         while (works){
             System.out.println("actions: \n1 - new sorted array\n2 - sort current array \n3 - break");
             int rep = sc.nextInt();
