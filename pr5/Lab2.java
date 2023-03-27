@@ -16,17 +16,16 @@ public class Lab2{
         Place way4 = new Place("London", 2618.4);
         Place way5 = new Place("Moscow", 1025.6);
         Place way6 = new Place("Vilnius", 601.7);
-        //Place way7 = new Place("Vilnius", 601.7);
 
         distances = new LinkedList<>();
-        distances.add(way0);
-        distances.add(way1);
-        distances.add(way2);
-        distances.add(way3);
-        distances.add(way4);
-        distances.add(way5);
-        distances.add(way6);
-        //distances.add(way7);
+        addUnique(way0);
+        addUnique(way1);
+        addUnique(way2);
+        addUnique(way3);
+        addUnique(way4);
+        addUnique(way5);
+        addUnique(way6);
+        addUnique(way6);
 
         for (int k = 0; k < distances.size(); k++){
             for (int i = 1; i < distances.size()-k; i++){
@@ -91,5 +90,13 @@ public class Lab2{
         }
         System.out.println("");
         operations();
+    }
+
+    public static void addUnique(Place place){
+        if (distances.contains(place)){
+            System.out.println("already in a list");
+        } else {
+            distances.add(place);
+        }
     }
 }
