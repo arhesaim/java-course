@@ -1,18 +1,18 @@
 package pr6;
 
 public interface Mappable {
-    String JSON_PROPERTY = "properties: ";
+    String JSON_PROPERTY = "properties: {%s}";
     String getLabel();
-    String getMarker();
     Geometry getShape();
+    String getMarker();
+    String getName();
+    String getType();
 
-    default void toJSON(){
-        getLabel();
-        getMarker();
-        getShape();
+    default String toJSON(){
+        return "label: " + getLabel() + ", marker: " + getMarker() + ", type: <" + getShape() + "> ";
     }
 
     static void maplt(Mappable mappable){
-        mappable.toJSON();
+        System.out.printf(JSON_PROPERTY, mappable.toJSON() + ", " + mappable.getName() + ", " + mappable.getType());
     };
 }

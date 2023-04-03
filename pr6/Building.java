@@ -1,20 +1,40 @@
 package pr6;
 
 public class Building implements Mappable{
-    String name;
-    UsageType type;
+    private String name;
+    private UsageType buildingType;
+    private Geometry type;
+    private Color color;
+    private PointMarkers pointMarkers;
+
+    public Building(String name, UsageType buildingType, Geometry type, Color color, PointMarkers pointMarkers) {
+        this.name = name;
+        this.buildingType = buildingType;
+        this.type = type;
+        this.color = color;
+        this.pointMarkers = pointMarkers;
+    }
+
     @Override
     public String getLabel() {
-        return null;
+        return "<" + this.name + "(" + this.buildingType + ")> ";
     }
 
     @Override
     public String getMarker() {
-        return null;
+        return "<" + this.color + " " + this.pointMarkers + "> ";
     }
 
     @Override
     public Geometry getShape() {
-        return null;
+        return this.type;
+    }
+    @Override
+    public String getName(){
+        return " name: " + this.name;
+    }
+    @Override
+    public String getType(){
+        return " usage: " + this.buildingType;
     }
 }
