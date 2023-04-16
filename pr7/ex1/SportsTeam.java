@@ -1,7 +1,6 @@
-package pr7;
+package pr7.ex1;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SportsTeam<T extends Player, S>{
     private S affiliation;

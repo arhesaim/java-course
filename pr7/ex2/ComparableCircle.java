@@ -1,4 +1,4 @@
-package pr7;
+package pr7.ex2;
 
 import java.lang.Comparable;
 public class ComparableCircle extends Circle implements Comparable<Circle>{

@@ -1,4 +1,4 @@
-package pr7;
+package pr7.ex1;
 
 public record FootballPlayer(String name, String shotsPerGame) implements Player {
     public FootballPlayer(String name, String shotsPerGame){

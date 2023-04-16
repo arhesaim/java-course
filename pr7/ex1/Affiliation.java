@@ -1,4 +1,4 @@
-package pr7;
+package pr7.ex1;
 
 public record Affiliation (String name, String type, String countryCode) {
     @Override

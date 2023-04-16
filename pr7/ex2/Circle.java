@@ -1,4 +1,4 @@
-package pr7;
+package pr7.ex2;
 
 public class Circle {
     private double radius;
