@@ -21,8 +21,8 @@ public class QueryList <T extends Student & QueryItem> {
 //        }
 //        return matches;
 //    }
-    public static <S extends QueryItem> List<S> getMatches(List<S> items, String field, String value) {
-        List<S> matches = new ArrayList<>();
+    public static <T extends QueryItem> List<T> getMatches(List<T> items, String field, String value) {
+        List<T> matches = new ArrayList<>();
         for (var item : items) {
             if (item.matchFieldValue(field, value)) {
                 matches.add(item);
